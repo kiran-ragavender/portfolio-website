@@ -883,15 +883,14 @@ footer {
 .profile-img {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;    /* matches the square photo, so nothing is cropped */
     object-fit: cover;
     filter: grayscale(0.4) contrast(1.05);
-    transition: filter 0.6s ease, transform 0.8s var(--ease);
+    transition: filter 0.6s ease;
 }
 
 .profile-frame:hover .profile-img {
     filter: none;
-    transform: scale(1.03);
 }
 
 /* Moving scan line over the photo */
