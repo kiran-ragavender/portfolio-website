@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Ragavender Shankar | Portfolio</title>
+    <meta name="description" content="Kiran Ragavender Shankar: CompTIA Security+ certified Computer Science student at CSUN with 2+ years of IT experience, four independently built software projects, and research work with NASA JPL.">
+    <meta name="theme-color" content="#030305">
+
+    <!-- Apply the saved theme before first paint (prevents a flash) -->
+    <script>
+        (function () {
+            var theme = 'dark';
+            try { theme = localStorage.getItem('theme') || 'dark'; } catch (e) {}
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.classList.add('js');
+        })();
+    </script>
+
+    <!-- Google Fonts: Orbitron (display headings) + Space Grotesk (body), selected weights only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Full-page stardust animation (drawn by js/stardust.js) -->
+    <canvas id="stardust" aria-hidden="true"></canvas>
+    <div class="scanlines" aria-hidden="true"></div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+         Hidden while the hero is on screen; slides in from section 2.
+         EDIT: add/remove links here (href must match a section id).
+         ========================================================= -->
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <div class="content-wrap nav-inner">
+            <a class="brand" href="#top">Kiran <span class="brand-middle">Ragavender </span>Shankar</a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+                <button class="nav-print" type="button" data-print-resume><i class="fa-solid fa-print" aria-hidden="true"></i> Print Resume</button>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">
+                    <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+                    <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-primary btn-sm nav-cta" type="button" data-print-resume><i class="fa-solid fa-print" aria-hidden="true"></i> Resume</button>
+                <button class="nav-menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- =========================================================
+         01 · HERO
+         ========================================================= -->
+    <header class="hero" id="top">
+        <!-- Retro perspective grid floor -->
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <div class="content-wrap hero-inner">
+            <!-- EDIT: availability line -->
+            <p class="status reveal"><span class="status-dot"></span>Seeking internships now &middot; Full-time from June 2027</p>
+
+            <!-- EDIT: your name (the span gets the neon gradient) -->
+            <h1 class="reveal" style="--d: .1s">Kiran Ragavender <span class="hl">Shankar</span></h1>
+
+            <!-- EDIT: role line -->
+            <p class="role reveal" style="--d: .15s">Computer Science @ CSUN <span>//</span> CompTIA Security+ <span>//</span> NASA JPL Research</p>
+
+            <!-- EDIT: value proposition -->
+            <p class="lead reveal" style="--d: .2s">I build software end to end, from full-stack apps in Java and Spring Boot to Python tools for networking and security. I bring 2+ years of hands-on IT experience, and I'm currently doing research on MoonWalkers, a lunar rover simulation platform built with NASA JPL.</p>
+
+            <div class="hero-actions reveal" style="--d: .3s">
+                <a class="btn btn-primary" href="#projects">View Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <button class="btn btn-ghost" type="button" data-print-resume><i class="fa-solid fa-print" aria-hidden="true"></i> Print Resume</button>
+            </div>
+
+            <!-- EDIT: quick stats -->
+            <ul class="hero-stats reveal" style="--d: .4s">
+                <li><strong>2+ yrs</strong><span>IT experience</span></li>
+                <li><strong>4</strong><span>Projects built</span></li>
+                <li><strong>Sec+</strong><span>CompTIA certified</span></li>
+                <li><strong>12</strong><span>Certifications</span></li>
+            </ul>
+        </div>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About section">
+            <span>Scroll</span>
+            <span class="scroll-line"></span>
+        </a>
+    </header>
+
+
+    <main>
+        <!-- =========================================================
+             02 · ABOUT
+             ========================================================= -->
+        <section class="section about" id="about">
+            <div class="content-wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">01 // About</p>
+                    <h2>About Me</h2>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Profile photo with HUD frame. EDIT: swap images/kiran.jpeg -->
+                    <figure class="profile-frame reveal">
+                        <span class="corner tl"></span><span class="corner tr"></span>
+                        <span class="corner bl"></span><span class="corner br"></span>
+                        <div class="profile-photo">
+                            <img class="profile-img" src="images/kiran.jpeg" alt="Portrait of Kiran Ragavender Shankar">
+                        </div>
+                        <figcaption class="profile-caption">
+                            <span>CS @ CSUN '27</span>
+                            <span>Los Angeles, CA</span>
+                        </figcaption>
+                    </figure>
+
+                    <div class="about-copy">
+                        <!-- EDIT: professional summary -->
+                        <div class="reveal">
+                            <p>I'm a CompTIA Security+ certified Computer Science student at CSUN (B.S., May 2027) with 2+ years of hands-on IT experience and four independently built software projects. I'm currently doing research on MoonWalkers, a lunar rover simulation platform built with NASA JPL and Armstrong Flight Research Center.</p>
+                            <p>I code in Python, Java, JavaScript, and SQL, and I've taken a full-stack application from design through deployment with Docker and Git. I'm fluent in Claude, Claude Code, and the Model Context Protocol, and I validate AI output rather than trusting it blindly. I work independently, document everything, and explain technical problems clearly to non-technical people.</p>
+                        </div>
+
+                        <!-- EDIT: quick facts -->
+                        <dl class="facts reveal" style="--d: .1s">
+                            <div><dt>Based in</dt><dd>Los Angeles, CA</dd></div>
+                            <div><dt>Education</dt><dd>B.S. Computer Science, CSUN</dd></div>
+                            <div><dt>Research</dt><dd>MoonWalkers &middot; NASA JPL</dd></div>
+                            <div><dt>Available</dt><dd>Internships now, full-time June 2027</dd></div>
+                        </dl>
+
+                        <!-- EDIT: core strengths, one group per block -->
+                        <div class="skill-group reveal" style="--d: .15s">
+                            <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Programming &amp; Development</h3>
+                            <ul class="badges">
+                                <li>Python</li><li>Java</li><li>JavaScript</li><li>SQL</li><li>Bash</li>
+                                <li>Spring Boot</li><li>REST APIs</li><li>Docker</li><li>Git / GitHub</li><li>Full-Stack Development</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-group reveal" style="--d: .2s">
+                            <h3><i class="fa-solid fa-robot" aria-hidden="true"></i> AI &amp; Automation</h3>
+                            <ul class="badges">
+                                <li>Claude</li><li>Claude Code</li><li>Model Context Protocol (MCP)</li><li>Prompt Engineering</li>
+                                <li>AI-Assisted Development</li><li>AI Output Evaluation</li><li>AI Agent Framework Research</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-group reveal" style="--d: .25s">
+                            <h3><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Security &amp; Networking</h3>
+                            <ul class="badges">
+                                <li>CompTIA Security+</li><li>Access Control &amp; Account Provisioning</li><li>Vulnerability Management (Qualys)</li>
+                                <li>OWASP</li><li>TCP/IP</li><li>DNS</li><li>DHCP</li><li>Network Traffic Analysis</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-group reveal" style="--d: .3s">
+                            <h3><i class="fa-solid fa-headset" aria-hidden="true"></i> IT Support &amp; Systems</h3>
+                            <ul class="badges">
+                                <li>Tier 1 / Tier 2 Support</li><li>Windows / macOS / Linux Administration</li>
+                                <li>Hardware / Software Troubleshooting</li><li>Microsoft 365</li><li>Figma</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-group reveal" style="--d: .35s">
+                            <h3><i class="fa-solid fa-people-group" aria-hidden="true"></i> Working Style</h3>
+                            <ul class="badges">
+                                <li>Independent Problem-Solving</li><li>Clear Technical Documentation</li><li>Cross-Functional Collaboration</li>
+                                <li>Fast Learner</li><li>Strong Written &amp; Verbal Communication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             03 · FEATURED PROJECTS
+             EDIT: copy one <article class="project-card"> block per project.
+             Links left as href="#" are hidden until you add a real URL.
+             ========================================================= -->
+        <section class="section projects" id="projects">
+            <div class="content-wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">02 // Projects</p>
+                    <h2>Featured Projects</h2>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card reveal">
+                        <div class="card-top">
+                            <span class="card-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+                            <span class="card-index">P&mdash;01</span>
+                        </div>
+                        <h3>Kaasu Creator</h3>
+                        <p class="card-subtitle">Full-Stack Web App</p>
+                        <p>A full-stack application I built independently, with a Java/Spring Boot back end, a structured database, and a JavaScript front end. I used Claude Code in the workflow and deployed it with Docker.</p>
+                        <ul class="tags">
+                            <li>Java</li><li>Spring Boot</li><li>REST APIs</li><li>Docker</li><li>JavaScript</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                            <a href="https://github.com/kiran-ragavender/kaasu-creator" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" style="--d: .1s">
+                        <div class="card-top">
+                            <span class="card-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span>
+                            <span class="card-index">P&mdash;02</span>
+                        </div>
+                        <h3>NetScope</h3>
+                        <p class="card-subtitle">Network Traffic Analyzer</p>
+                        <p>A command-line tool that captures and parses raw packet data using tshark. It automatically generates readable Chart.js dashboards and reports.</p>
+                        <ul class="tags">
+                            <li>Python</li><li>tshark</li><li>JavaScript</li><li>Chart.js</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                            <a href="https://github.com/kiran-ragavender/netscope" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="card-top">
+                            <span class="card-icon"><i class="fa-solid fa-key" aria-hidden="true"></i></span>
+                            <span class="card-index">P&mdash;03</span>
+                        </div>
+                        <h3>Password Strength Checker</h3>
+                        <p class="card-subtitle">Security Tool</p>
+                        <p>A security tool that scores passwords using Shannon entropy calculations and OWASP-aligned pattern checks. It flags weak credentials so they can be fixed before they become a risk.</p>
+                        <ul class="tags">
+                            <li>Python</li><li>Regex</li><li>Shannon Entropy</li><li>OWASP</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                            <a href="https://github.com/kiran-ragavender/password-checker" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" style="--d: .1s">
+                        <div class="card-top">
+                            <span class="card-icon"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i></span>
+                            <span class="card-index">P&mdash;04</span>
+                        </div>
+                        <h3>TCP Port Scanner</h3>
+                        <p class="card-subtitle">Multithreaded Network Tool</p>
+                        <p>A multithreaded scanner that uses raw sockets to probe hosts concurrently. It reports open ports and services across every host it scans.</p>
+                        <ul class="tags">
+                            <li>Python</li><li>Socket Programming</li><li>Threading</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                            <a href="https://github.com/kiran-ragavender/Port-Scanner" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             04 · EXPERIENCE TIMELINE
+             EDIT: copy one <li class="timeline-item"> per role/milestone,
+             newest first. Add "is-current" to highlight the active one.
+             ========================================================= -->
+        <section class="section work" id="experience">
+            <div class="content-wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">03 // Experience</p>
+                    <h2>Experience</h2>
+                </div>
+
+                <ol class="timeline">
+                    <li class="timeline-item is-current reveal">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Sep 2026 &ndash; Present</span>
+                            <span class="timeline-type">Research</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>MoonWalkers Project (NASA JPL Collaboration)</h3>
+                            <p class="org">CSUN Autonomy Research Center (ARCS) &middot; Northridge, CA</p>
+                            <p>A multi-institution platform with NASA JPL and Armstrong Flight Research Center, where vision-language models (VLMs) convert 2D images into simulation-ready 3D models for lunar rover exploration.</p>
+                            <ul>
+                                <li>Contributing to the rapid digital-twin generation subteam</li>
+                                <li>Helping plan access control, API key management, and platform architecture</li>
+                                <li>Designing Settings and Integrations mockups in Figma</li>
+                                <li>Researching AI agent frameworks and contributing to the software requirements specification</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Jun 2026</span>
+                            <span class="timeline-type">Certification</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>CompTIA Security+ Certified</h3>
+                            <p class="org">CompTIA</p>
+                            <p>Industry-standard certification covering threats, security architecture, operations, and risk management.</p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Nov 2023 &ndash; Dec 2024</span>
+                            <span class="timeline-type">Role</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Game Management Event Staff</h3>
+                            <p class="org">CSUN &middot; Los Angeles, CA</p>
+                            <ul>
+                                <li>Supported 20+ large-scale campus events, coordinating live operations across logistics, athletics, and administration teams in a fast-paced environment</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Aug 2023 &ndash; May 2027</span>
+                            <span class="timeline-type">Education</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>B.S. Computer Science</h3>
+                            <p class="org">California State University, Northridge (CSUN) &middot; Los Angeles, CA</p>
+                            <p>Coursework: Data Structures &amp; Algorithms, Operating Systems, Computer Networks, Computer Security, Database Systems, Discrete Mathematics.</p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Mar 2022 &ndash; May 2023</span>
+                            <span class="timeline-type">Role</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Information Technology Staff</h3>
+                            <p class="org">KSR Dance &amp; Silambam Studio &middot; Chennai, India</p>
+                            <ul>
+                                <li>Served as the sole IT resource for 15 months with no supervisor: set up, configured, and troubleshot hardware, software, and the network, delivering full uptime and zero data loss</li>
+                                <li>Managed account provisioning/deprovisioning and access control, and documented every procedure and fix for repeatable use</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Apr 2021 &ndash; Feb 2022</span>
+                            <span class="timeline-type">Role</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Technical Support Help Desk</h3>
+                            <p class="org">SP Hema Academy &middot; Chennai, India</p>
+                            <ul>
+                                <li>Delivered Tier 1/Tier 2 support for staff and students across Windows, SaaS tools, and network connectivity, logging tickets and building a knowledge base of recurring issues that made resolutions faster and more consistent</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+
+                <!-- EDIT: certifications -->
+                <h3 class="cert-heading reveal">Certifications</h3>
+                <ul class="cert-grid">
+                    <li class="featured reveal"><strong>CompTIA Security+</strong><span>CompTIA &middot; June 2026</span></li>
+                    <li class="reveal"><strong>Model Context Protocol: Advanced Topics</strong><span>Anthropic</span></li>
+                    <li class="reveal"><strong>AI Fluency: Framework &amp; Foundations</strong><span>Anthropic</span></li>
+                    <li class="reveal"><strong>Introduction to Model Context Protocol</strong><span>Anthropic</span></li>
+                    <li class="reveal"><strong>Google Cybersecurity Professional Certificate</strong><span>Google</span></li>
+                    <li class="reveal"><strong>Qualys Vulnerability Management Foundation</strong><span>Qualys</span></li>
+                    <li class="reveal"><strong>Introduction to MS Excel</strong><span>Simplilearn</span></li>
+                    <li class="reveal"><strong>Cisco Networking Academy</strong><span>Cisco</span></li>
+                    <li class="reveal"><strong>Trust and Security with Google Cloud</strong><span>Simplilearn</span></li>
+                    <li class="reveal"><strong>Cyber Security Operations Job Simulation</strong><span>Forage</span></li>
+                    <li class="reveal"><strong>Cybersecurity Analyst Job Simulation</strong><span>Forage</span></li>
+                    <li class="reveal"><strong>Professional Networking for Career Growth</strong><span>HP LIFE</span></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             05 · CONTACT
+             The form sends through Formspree when an endpoint is set in
+             js/main.js (CONTACT.endpoint); otherwise it opens the
+             visitor's email app with the message pre-filled.
+             ========================================================= -->
+        <section class="section contact" id="contact">
+            <div class="content-wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">04 // Contact</p>
+                    <h2>Let's Keep in Touch!</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-intro reveal">
+                        <!-- Animated mailbox: the envelope drops in and the flag goes up on send -->
+                        <div class="mailbox" id="mailbox" aria-hidden="true">
+                            <div class="mailbox-envelope"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="mailbox-flag"></div>
+                            <div class="mailbox-body"><span class="mailbox-slot"></span></div>
+                            <div class="mailbox-post"></div>
+                        </div>
+
+                        <!-- EDIT: contact blurb -->
+                        <p>I'm actively looking for internships right now, and for full-time roles starting June 2027. Leave a message and I'll get back to you.</p>
+
+                        <!-- EDIT: social links. Links left as href="#" are hidden. -->
+                        <div class="contact-info">
+                            <a class="icon-btn" href="https://www.linkedin.com/in/kiran-ragavender-shankar/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a class="icon-btn" href="https://github.com/kiran-ragavender" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                            <a class="icon-btn" href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                            <a class="icon-btn" href="mailto:kiranragavendershankar@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                        <a class="contact-email" href="mailto:kiranragavendershankar@gmail.com">kiranragavendershankar@gmail.com</a>
+                    </div>
+
+                    <form class="contact-form reveal" id="contact-form" style="--d: .1s" novalidate>
+                        <div class="form-head">
+                            <span>// New message</span>
+                            <span class="form-dots"><i></i><i></i><i></i></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="cf-name">Name</label>
+                                <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-error">
+                                <p class="field-error" id="cf-name-error"></p>
+                            </div>
+                            <div class="field">
+                                <label for="cf-email">Email</label>
+                                <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-error">
+                                <p class="field-error" id="cf-email-error"></p>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" name="message" rows="6" required aria-describedby="cf-message-error"></textarea>
+                            <p class="field-error" id="cf-message-error"></p>
+                        </div>
+
+                        <!-- Spam trap: hidden from people, bots fill it in -->
+                        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <div class="form-foot">
+                            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                            <button class="btn btn-primary" type="submit">Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="content-wrap footer-inner">
+            <p>&copy; <span id="year">2026</span> Kiran Ragavender Shankar</p>
+            <button class="footer-print" type="button" data-print-resume><i class="fa-solid fa-print" aria-hidden="true"></i> Print Resume</button>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-top button (appears after the hero) -->
+    <a class="to-top" href="#top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+
+
+    <!-- =========================================================
+         PRINTABLE RESUME
+         Hidden on screen. Shown (black & white, letter size) only when
+         printing: the "Print Resume" buttons or Ctrl/Cmd + P.
+         EDIT: keep this in sync with your latest resume.
+         ========================================================= -->
+    <div class="print-resume">
+        <header class="r-header">
+            <h1>Kiran Ragavender Shankar</h1>
+            <p>(737) 292-9456 &nbsp;|&nbsp; kiranragavendershankar@gmail.com &nbsp;|&nbsp; Los Angeles, CA</p>
+            <p><u>linkedin.com/in/kiran-ragavender-shankar</u> &nbsp;|&nbsp; <u>github.com/kiran-ragavender</u></p>
+        </header>
+
+        <h2>Professional Summary</h2>
+        <p>CompTIA Security+ certified Computer Science student at CSUN (B.S., May 2027) with 2+ years of hands-on IT experience, four independently built software projects, and current research work on MoonWalkers, a lunar rover simulation platform built with NASA JPL and Armstrong Flight Research Center. Codes in Python, Java, JavaScript, and SQL, and has taken a full-stack application from design through deployment with Docker and Git. Fluent in Claude, Claude Code, and the Model Context Protocol (Anthropic-certified), with a habit of validating AI output rather than trusting it blindly. Works independently, documents everything, and explains technical problems clearly to non-technical people.</p>
+
+        <h2>Core Strengths</h2>
+        <p class="r-line"><strong>Programming &amp; Development:</strong> Python, Java, JavaScript, SQL, Bash, Spring Boot, REST APIs, Docker, Git/GitHub, Full-Stack Development</p>
+        <p class="r-line"><strong>AI &amp; Automation:</strong> Claude, Claude Code, Model Context Protocol (MCP), Prompt Engineering, AI-Assisted Development, AI Output Evaluation, AI Agent Framework Research</p>
+        <p class="r-line"><strong>Security &amp; Networking:</strong> CompTIA Security+, Access Control &amp; Account Provisioning, Vulnerability Management (Qualys), OWASP, TCP/IP, DNS, DHCP, Network Traffic Analysis</p>
+        <p class="r-line"><strong>IT Support &amp; Systems:</strong> Tier 1/Tier 2 Support, Windows/macOS/Linux Administration, Hardware/Software Troubleshooting, Microsoft 365, Figma</p>
+        <p class="r-line"><strong>Working Style:</strong> Independent Problem-Solving, Clear Technical Documentation, Cross-Functional Collaboration, Fast Learner, Strong Written &amp; Verbal Communication</p>
+
+        <h2>Education</h2>
+        <div class="r-row"><strong>Bachelor of Science &mdash; Computer Science</strong><span>Aug 2023 &ndash; May 2027 (Expected)</span></div>
+        <p><em>California State University, Northridge (CSUN), Los Angeles, CA</em> &nbsp;|&nbsp; Coursework: Data Structures &amp; Algorithms, Operating Systems, Computer Networks, Computer Security, Database Systems, Discrete Mathematics</p>
+
+        <h2>Certifications</h2>
+        <!-- Listed in column order: first six fill the left column -->
+        <ul class="r-certs">
+            <li><strong>CompTIA Security+ (Certified, June 2026)</strong></li>
+            <li>Model Context Protocol: Advanced Topics &mdash; Anthropic</li>
+            <li>AI Fluency: Framework &amp; Foundations &mdash; Anthropic</li>
+            <li>Introduction to Model Context Protocol &mdash; Anthropic</li>
+            <li>Google Cybersecurity Professional Certificate &mdash; Google</li>
+            <li>Qualys Vulnerability Management Foundation &mdash; Qualys</li>
+            <li>Introduction to MS Excel &mdash; Simplilearn</li>
+            <li>Cisco Networking Academy &mdash; Cisco</li>
+            <li>Trust and Security with Google Cloud &mdash; Simplilearn</li>
+            <li>Cyber Security Operations Job Simulation &mdash; Forage</li>
+            <li>Cybersecurity Analyst Job Simulation &mdash; Forage</li>
+            <li>Professional Networking for Career Growth &mdash; HP LIFE</li>
+        </ul>
+
+        <h2>Experience</h2>
+        <div class="r-row"><span><strong>CSUN Autonomy Research Center (ARCS)</strong> | <em>MoonWalkers Project (NASA JPL Collaboration), Northridge, CA</em></span><span>Sep 2026 &ndash; Present</span></div>
+        <ul>
+            <li>Contributing to a rapid digital-twin generation subteam on a multi-institution platform with NASA JPL and Armstrong Flight Research Center, where vision-language models (VLMs) convert 2D images into simulation-ready 3D models for lunar rover exploration.</li>
+            <li>Helping plan access control, API key management, and platform architecture, designing Settings and Integrations mockups in Figma, researching AI agent frameworks, and contributing to the software requirements specification.</li>
+        </ul>
+        <div class="r-row"><span><strong>Information Technology Staff</strong> | <em>KSR Dance &amp; Silambam Studio, Chennai, India</em></span><span>Mar 2022 &ndash; May 2023</span></div>
+        <ul>
+            <li>Served as the sole IT resource for 15 months with no supervisor: set up, configured, and troubleshot hardware, software, and the network, delivering full uptime and zero data loss.</li>
+            <li>Managed account provisioning/deprovisioning and access control, and documented every procedure and fix for repeatable use.</li>
+        </ul>
+        <div class="r-row"><span><strong>Technical Support Help Desk</strong> | <em>SP Hema Academy, Chennai, India</em></span><span>Apr 2021 &ndash; Feb 2022</span></div>
+        <ul>
+            <li>Delivered Tier 1/Tier 2 support for staff and students across Windows, SaaS tools, and network connectivity, logging tickets and building a knowledge base of recurring issues that made resolutions faster and more consistent.</li>
+        </ul>
+        <div class="r-row"><span><strong>Game Management Event Staff</strong> | <em>CSUN, Los Angeles, CA</em></span><span>Nov 2023 &ndash; Dec 2024</span></div>
+        <ul>
+            <li>Supported 20+ large-scale campus events, coordinating live operations across logistics, athletics, and administration teams in a fast-paced environment.</li>
+        </ul>
+
+        <h2>Independent Projects</h2>
+        <p class="r-project"><strong>Kaasu Creator &mdash; Full-Stack Web App</strong> | <em>Java, Spring Boot, REST APIs, Docker, JavaScript</em><br><u>github.com/kiran-ragavender/kaasu-creator</u></p>
+        <ul>
+            <li>Built a full-stack application independently (Java/Spring Boot back end, structured database, JavaScript front end), using Claude Code in the workflow and deploying with Docker.</li>
+        </ul>
+        <p class="r-project"><strong>NetScope &mdash; Network Traffic Analyzer</strong> | <em>Python, tshark, JavaScript, Chart.js</em><br><u>github.com/kiran-ragavender/netscope</u></p>
+        <ul>
+            <li>Built a command-line tool that captures and parses raw packet data and automatically generates readable Chart.js dashboards and reports.</li>
+        </ul>
+        <p class="r-project"><strong>Password Strength Checker</strong> | <em>Python, Regex, Shannon Entropy, OWASP</em><br><u>github.com/kiran-ragavender/password-checker</u></p>
+        <ul>
+            <li>Built a security tool that scores passwords using entropy calculations and OWASP-aligned pattern checks to flag weak credentials.</li>
+        </ul>
+        <p class="r-project"><strong>TCP Port Scanner</strong> | <em>Python, Socket Programming, Threading</em><br><u>github.com/kiran-ragavender/Port-Scanner</u></p>
+        <ul>
+            <li>Wrote a multithreaded scanner using raw sockets to probe hosts concurrently and report open ports and services.</li>
+        </ul>
+    </div>
+
+    <script src="js/stardust.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
